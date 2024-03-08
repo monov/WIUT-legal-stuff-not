@@ -4,8 +4,8 @@ const { message } = require("telegraf/filters");
 const { registration } = require("./reg.js");
 const { dotenv } = require("dotenv").config();
 
-const uri =
-  "mongodb+srv://utka:123123Ss@wiut.zicedjb.mongodb.net/?retryWrites=true&w=majority&appName=WIUT";
+const uri = process.env.URI
+  
 
 const client = new MongoClient(uri, {
   serverApi: {
